@@ -17,15 +17,7 @@ int main() {
     // Read and save an integer, double, and String to your variables.
     scanf("%d",&j);
     scanf("%lf", &f);
-    int counter =0;
-    while (1) 
-    {
-    scanf("%c",&a[counter]);
-    if(a[counter] == EOF || a[counter] == '\n')
-    break;
-    counter++;
-    }
-    scanf("%[^\n][^\r]%*c", a);
+    scanf("%*[\n]%[^\n]%*c", a); //read until \n and discard it. read until \n and save it inside of an array
     // Print the sum of both integer variables on a new line.
     printf("%d\n", i+j);
     // Print the sum of the double variables on a new line.
